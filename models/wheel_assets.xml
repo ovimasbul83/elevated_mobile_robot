@@ -1,0 +1,28 @@
+<mujocoinclude>
+    <asset>
+        <mesh name="fl_fixed_metal" file="wheels/fl_fixed_metal.stl" />
+        <mesh name="fl_motor" file="wheels/fl_motor.stl" />
+        <mesh name="fl_wheel_hub" file="wheels/fl_wheel_hub.stl" />
+        <mesh name="fl_wheel_rollers" file="wheels/fl_wheel_rollers.stl" />
+        <mesh name="fl_wheel_rollers_1" file="wheels/fl_wheel_rollers_1.stl" />
+        <mesh name="fl_wheel_adapter" file="wheels/fl_wheel_adapter.stl" />
+        <mesh name="fr_fixed_metal" file="wheels/fr_fixed_metal.stl" />
+        <mesh name="fr_motor" file="wheels/fr_motor.stl" />
+        <mesh name="fr_wheel_hub" file="wheels/fr_wheel_hub.stl" />
+        <mesh name="fr_wheel_rollers" file="wheels/fr_wheel_rollers.stl" />
+        <mesh name="fr_wheel_rollers_1" file="wheels/fr_wheel_rollers_1.stl" />
+        <mesh name="fr_wheel_adapter" file="wheels/fr_wheel_adapter.stl" />
+        <mesh name="bl_fixed_metal" file="wheels/bl_fixed_metal.stl" />
+        <mesh name="bl_motor" file="wheels/bl_motor.stl" />
+        <mesh name="bl_wheel_hub" file="wheels/bl_wheel_hub.stl" />
+        <mesh name="bl_wheel_rollers" file="wheels/bl_wheel_rollers.stl" />
+        <mesh name="bl_wheel_rollers_1" file="wheels/bl_wheel_rollers_1.stl" />
+        <mesh name="bl_wheel_adapter" file="wheels/bl_wheel_adapter.stl" />
+        <mesh name="br_fixed_metal" file="wheels/br_fixed_metal.stl" />
+        <mesh name="br_motor" file="wheels/br_motor.stl" />
+        <mesh name="br_wheel_hub" file="wheels/br_wheel_hub.stl" />
+        <mesh name="br_wheel_rollers" file="wheels/br_wheel_rollers.stl" />
+        <mesh name="br_wheel_rollers_1" file="wheels/br_wheel_rollers_1.stl" />
+        <mesh name="br_wheel_adapter" file="wheels/br_wheel_adapter.stl" />
+    </asset>
+</mujocoinclude>

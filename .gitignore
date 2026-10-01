@@ -216,3 +216,35 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# MuJoCo mobile robot project
+# Local Python environments and installed CAD dependencies
+.venv/
+venv/
+.cad_deps/
+__pycache__/
+*.py[cod]
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+
+# MuJoCo compiled models and diagnostic exports
+/mjmodel.mjb
+/mjmodel.xml
+/MJMODEL.TXT
+/MUJOCO_LOG.TXT
+
+# Intermediate CAD imports and meshes; runtime meshes live in models/assets/
+/outputs/wheel_cad/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Keep runtime wheel assets despite the Python packaging rule above
+!models/assets/meshes/wheels/
+!models/assets/meshes/wheels/**

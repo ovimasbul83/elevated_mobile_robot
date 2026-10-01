@@ -1,0 +1,246 @@
+<mujocoinclude>
+    <body name="wheel_module_fl" pos="0.304 0.215 -0.03">
+        <body name="wheel_fl" pos="5.599367177e-16 0.04857332 -1.561332344e-14">
+            <joint name="wheel_fl_joint" type="hinge" axis="0 1 0" />
+            <inertial pos="0 0 0" mass="0.76" diaginertia="0.0013027037972 0.00220818090334 0.0013027037972" />
+            <geom name="wheel_fl_geom" type="cylinder" size="0.07622993098 0.02800000086" euler="1.570796326794897 0 0" mass="0" rgba="0 0 0 0" group="3" friction="1.0 0.01 0.001" contype="0" conaffinity="0" />
+            <geom name="fl_wheel_hub_visual" type="mesh" mesh="fl_wheel_hub" rgba=".66 .69 .73 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fl_wheel_rollers_visual" type="mesh" mesh="fl_wheel_rollers" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fl_wheel_rollers_1_visual" type="mesh" mesh="fl_wheel_rollers_1" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fl_wheel_adapter_visual" type="mesh" mesh="fl_wheel_adapter" rgba=".5 .53 .58 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <body name="fl_roller_00" pos="0 0 0.0594593461644">
+                <joint name="fl_roller_00_joint" type="hinge" axis="0.707106781187 0.707106781187 -0" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_00_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 -0.5 0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_01" pos="0.0297296730822 0 0.0514933042708">
+                <joint name="fl_roller_01_joint" type="hinge" axis="0.612372435696 0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_01_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 -0.621875823754 0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_02" pos="0.0514933042708 0 0.0297296730822">
+                <joint name="fl_roller_02_joint" type="hinge" axis="0.353553390593 0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_02_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 -0.803087152355 0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_03" pos="0.0594593461644 0 3.64083489798e-18">
+                <joint name="fl_roller_03_joint" type="hinge" axis="4.32978028118e-17 0.707106781187 -0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_03_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.382683432365 -0.923879532511 5.65713056144e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_04" pos="0.0514933042708 0 -0.0297296730822">
+                <joint name="fl_roller_04_joint" type="hinge" axis="-0.353553390593 0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_04_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 -0.803087152355 -0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_05" pos="0.0297296730822 0 -0.0514933042708">
+                <joint name="fl_roller_05_joint" type="hinge" axis="-0.612372435696 0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_05_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 -0.621875823754 -0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_06" pos="7.28166979596e-18 0 -0.0594593461644">
+                <joint name="fl_roller_06_joint" type="hinge" axis="-0.707106781187 0.707106781187 -8.65956056235e-17" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_06_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 -0.5 -0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_07" pos="-0.0297296730822 0 -0.0514933042708">
+                <joint name="fl_roller_07_joint" type="hinge" axis="-0.612372435696 0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_07_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 -0.429766251885 -0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_08" pos="-0.0514933042708 0 -0.0297296730822">
+                <joint name="fl_roller_08_joint" type="hinge" axis="-0.353553390593 0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_08_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 -0.3937651911 -0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_09" pos="-0.0594593461644 0 -1.09225046939e-17">
+                <joint name="fl_roller_09_joint" type="hinge" axis="-1.29893408435e-16 0.707106781187 0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_09_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.923879532511 -0.382683432365 -7.02978060799e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_10" pos="-0.0514933042708 0 0.0297296730822">
+                <joint name="fl_roller_10_joint" type="hinge" axis="0.353553390593 0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_10_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 -0.3937651911 0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fl_roller_11" pos="-0.0297296730822 0 0.0514933042708">
+                <joint name="fl_roller_11_joint" type="hinge" axis="0.612372435696 0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fl_roller_11_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 -0.429766251885 0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+        </body>
+        <geom name="fl_fixed_metal_visual" type="mesh" mesh="fl_fixed_metal" rgba=".55 .58 .62 1" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="fl_motor_visual" type="mesh" mesh="fl_motor" rgba=".09 .10 .12 1" contype="0" conaffinity="0" group="2" mass="0" />
+    </body>
+    <body name="wheel_module_fr" pos="0.304 -0.215 -0.03">
+        <body name="wheel_fr" pos="5.599367177e-16 -0.04857332 -1.561332344e-14">
+            <joint name="wheel_fr_joint" type="hinge" axis="0 1 0" />
+            <inertial pos="0 0 0" mass="0.76" diaginertia="0.0013027037972 0.00220818090334 0.0013027037972" />
+            <geom name="wheel_fr_geom" type="cylinder" size="0.07622993098 0.02800000086" euler="1.570796326794897 0 0" mass="0" rgba="0 0 0 0" group="3" friction="1.0 0.01 0.001" contype="0" conaffinity="0" />
+            <geom name="fr_wheel_hub_visual" type="mesh" mesh="fr_wheel_hub" rgba=".66 .69 .73 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fr_wheel_rollers_visual" type="mesh" mesh="fr_wheel_rollers" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fr_wheel_rollers_1_visual" type="mesh" mesh="fr_wheel_rollers_1" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="fr_wheel_adapter_visual" type="mesh" mesh="fr_wheel_adapter" rgba=".5 .53 .58 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <body name="fr_roller_00" pos="0 0 0.0594593461644">
+                <joint name="fr_roller_00_joint" type="hinge" axis="0.707106781187 -0.707106781187 -0" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_00_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 0.5 0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_01" pos="0.0297296730822 0 0.0514933042708">
+                <joint name="fr_roller_01_joint" type="hinge" axis="0.612372435696 -0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_01_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 0.621875823754 0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_02" pos="0.0514933042708 0 0.0297296730822">
+                <joint name="fr_roller_02_joint" type="hinge" axis="0.353553390593 -0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_02_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 0.803087152355 0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_03" pos="0.0594593461644 0 3.64083489798e-18">
+                <joint name="fr_roller_03_joint" type="hinge" axis="4.32978028118e-17 -0.707106781187 -0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_03_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.382683432365 0.923879532511 5.65713056144e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_04" pos="0.0514933042708 0 -0.0297296730822">
+                <joint name="fr_roller_04_joint" type="hinge" axis="-0.353553390593 -0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_04_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 0.803087152355 -0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_05" pos="0.0297296730822 0 -0.0514933042708">
+                <joint name="fr_roller_05_joint" type="hinge" axis="-0.612372435696 -0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_05_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 0.621875823754 -0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_06" pos="7.28166979596e-18 0 -0.0594593461644">
+                <joint name="fr_roller_06_joint" type="hinge" axis="-0.707106781187 -0.707106781187 -8.65956056235e-17" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_06_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 0.5 -0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_07" pos="-0.0297296730822 0 -0.0514933042708">
+                <joint name="fr_roller_07_joint" type="hinge" axis="-0.612372435696 -0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_07_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 0.429766251885 -0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_08" pos="-0.0514933042708 0 -0.0297296730822">
+                <joint name="fr_roller_08_joint" type="hinge" axis="-0.353553390593 -0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_08_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 0.3937651911 -0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_09" pos="-0.0594593461644 0 -1.09225046939e-17">
+                <joint name="fr_roller_09_joint" type="hinge" axis="-1.29893408435e-16 -0.707106781187 0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_09_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.923879532511 0.382683432365 -7.02978060799e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_10" pos="-0.0514933042708 0 0.0297296730822">
+                <joint name="fr_roller_10_joint" type="hinge" axis="0.353553390593 -0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_10_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 0.3937651911 0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="fr_roller_11" pos="-0.0297296730822 0 0.0514933042708">
+                <joint name="fr_roller_11_joint" type="hinge" axis="0.612372435696 -0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="fr_roller_11_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 0.429766251885 0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+        </body>
+        <geom name="fr_fixed_metal_visual" type="mesh" mesh="fr_fixed_metal" rgba=".55 .58 .62 1" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="fr_motor_visual" type="mesh" mesh="fr_motor" rgba=".09 .10 .12 1" contype="0" conaffinity="0" group="2" mass="0" />
+    </body>
+    <body name="wheel_module_bl" pos="-0.304 0.215 -0.03">
+        <body name="wheel_bl" pos="-5.599367177e-16 0.04857332 -1.561332344e-14">
+            <joint name="wheel_bl_joint" type="hinge" axis="0 1 0" />
+            <inertial pos="0 0 0" mass="0.76" diaginertia="0.0013027037972 0.00220818090334 0.0013027037972" />
+            <geom name="wheel_bl_geom" type="cylinder" size="0.07622993098 0.02800000086" euler="1.570796326794897 0 0" mass="0" rgba="0 0 0 0" group="3" friction="1.0 0.01 0.001" contype="0" conaffinity="0" />
+            <geom name="bl_wheel_hub_visual" type="mesh" mesh="bl_wheel_hub" rgba=".66 .69 .73 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="bl_wheel_rollers_visual" type="mesh" mesh="bl_wheel_rollers" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="bl_wheel_rollers_1_visual" type="mesh" mesh="bl_wheel_rollers_1" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="bl_wheel_adapter_visual" type="mesh" mesh="bl_wheel_adapter" rgba=".5 .53 .58 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <body name="bl_roller_00" pos="0 0 0.0594593461644">
+                <joint name="bl_roller_00_joint" type="hinge" axis="0.707106781187 -0.707106781187 -0" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_00_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 0.5 0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_01" pos="0.0297296730822 0 0.0514933042708">
+                <joint name="bl_roller_01_joint" type="hinge" axis="0.612372435696 -0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_01_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 0.621875823754 0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_02" pos="0.0514933042708 0 0.0297296730822">
+                <joint name="bl_roller_02_joint" type="hinge" axis="0.353553390593 -0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_02_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 0.803087152355 0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_03" pos="0.0594593461644 0 3.64083489798e-18">
+                <joint name="bl_roller_03_joint" type="hinge" axis="4.32978028118e-17 -0.707106781187 -0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_03_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.382683432365 0.923879532511 5.65713056144e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_04" pos="0.0514933042708 0 -0.0297296730822">
+                <joint name="bl_roller_04_joint" type="hinge" axis="-0.353553390593 -0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_04_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 0.803087152355 -0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_05" pos="0.0297296730822 0 -0.0514933042708">
+                <joint name="bl_roller_05_joint" type="hinge" axis="-0.612372435696 -0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_05_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 0.621875823754 -0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_06" pos="7.28166979596e-18 0 -0.0594593461644">
+                <joint name="bl_roller_06_joint" type="hinge" axis="-0.707106781187 -0.707106781187 -8.65956056235e-17" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_06_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 0.5 -0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_07" pos="-0.0297296730822 0 -0.0514933042708">
+                <joint name="bl_roller_07_joint" type="hinge" axis="-0.612372435696 -0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_07_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 0.429766251885 -0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_08" pos="-0.0514933042708 0 -0.0297296730822">
+                <joint name="bl_roller_08_joint" type="hinge" axis="-0.353553390593 -0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_08_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 0.3937651911 -0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_09" pos="-0.0594593461644 0 -1.09225046939e-17">
+                <joint name="bl_roller_09_joint" type="hinge" axis="-1.29893408435e-16 -0.707106781187 0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_09_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.923879532511 0.382683432365 -7.02978060799e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_10" pos="-0.0514933042708 0 0.0297296730822">
+                <joint name="bl_roller_10_joint" type="hinge" axis="0.353553390593 -0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_10_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 0.3937651911 0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="bl_roller_11" pos="-0.0297296730822 0 0.0514933042708">
+                <joint name="bl_roller_11_joint" type="hinge" axis="0.612372435696 -0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="bl_roller_11_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 0.429766251885 0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+        </body>
+        <geom name="bl_fixed_metal_visual" type="mesh" mesh="bl_fixed_metal" rgba=".55 .58 .62 1" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="bl_motor_visual" type="mesh" mesh="bl_motor" rgba=".09 .10 .12 1" contype="0" conaffinity="0" group="2" mass="0" />
+    </body>
+    <body name="wheel_module_br" pos="-0.304 -0.215 -0.03">
+        <body name="wheel_br" pos="-5.599367177e-16 -0.04857332 -1.561332344e-14">
+            <joint name="wheel_br_joint" type="hinge" axis="0 1 0" />
+            <inertial pos="0 0 0" mass="0.76" diaginertia="0.0013027037972 0.00220818090334 0.0013027037972" />
+            <geom name="wheel_br_geom" type="cylinder" size="0.07622993098 0.02800000086" euler="1.570796326794897 0 0" mass="0" rgba="0 0 0 0" group="3" friction="1.0 0.01 0.001" contype="0" conaffinity="0" />
+            <geom name="br_wheel_hub_visual" type="mesh" mesh="br_wheel_hub" rgba=".66 .69 .73 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="br_wheel_rollers_visual" type="mesh" mesh="br_wheel_rollers" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="br_wheel_rollers_1_visual" type="mesh" mesh="br_wheel_rollers_1" rgba=".065 .07 .08 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <geom name="br_wheel_adapter_visual" type="mesh" mesh="br_wheel_adapter" rgba=".5 .53 .58 1" contype="0" conaffinity="0" group="2" mass="0" />
+            <body name="br_roller_00" pos="0 0 0.0594593461644">
+                <joint name="br_roller_00_joint" type="hinge" axis="0.707106781187 0.707106781187 -0" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_00_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 -0.5 0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_01" pos="0.0297296730822 0 0.0514933042708">
+                <joint name="br_roller_01_joint" type="hinge" axis="0.612372435696 0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_01_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 -0.621875823754 0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_02" pos="0.0514933042708 0 0.0297296730822">
+                <joint name="br_roller_02_joint" type="hinge" axis="0.353553390593 0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_02_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 -0.803087152355 0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_03" pos="0.0594593461644 0 3.64083489798e-18">
+                <joint name="br_roller_03_joint" type="hinge" axis="4.32978028118e-17 0.707106781187 -0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_03_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.382683432365 -0.923879532511 5.65713056144e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_04" pos="0.0514933042708 0 -0.0297296730822">
+                <joint name="br_roller_04_joint" type="hinge" axis="-0.353553390593 0.707106781187 -0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_04_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.440242867236 -0.803087152355 -0.401543576178 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_05" pos="0.0297296730822 0 -0.0514933042708">
+                <joint name="br_roller_05_joint" type="hinge" axis="-0.612372435696 0.707106781187 -0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_05_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.568527312188 -0.621875823754 -0.53856026137 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_06" pos="7.28166979596e-18 0 -0.0594593461644">
+                <joint name="br_roller_06_joint" type="hinge" axis="-0.707106781187 0.707106781187 -8.65956056235e-17" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_06_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.707106781187 -0.5 -0.5 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_07" pos="-0.0297296730822 0 -0.0514933042708">
+                <joint name="br_roller_07_joint" type="hinge" axis="-0.612372435696 0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_07_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 -0.429766251885 -0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_08" pos="-0.0514933042708 0 -0.0297296730822">
+                <joint name="br_roller_08_joint" type="hinge" axis="-0.353553390593 0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_08_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 -0.3937651911 -0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_09" pos="-0.0594593461644 0 -1.09225046939e-17">
+                <joint name="br_roller_09_joint" type="hinge" axis="-1.29893408435e-16 0.707106781187 0.707106781187" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_09_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.923879532511 -0.382683432365 -7.02978060799e-17 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_10" pos="-0.0514933042708 0 0.0297296730822">
+                <joint name="br_roller_10_joint" type="hinge" axis="0.353553390593 0.707106781187 0.612372435696" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_10_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.897878732262 -0.3937651911 0.19688259555 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+            <body name="br_roller_11" pos="-0.0297296730822 0 0.0514933042708">
+                <joint name="br_roller_11_joint" type="hinge" axis="0.612372435696 0.707106781187 0.353553390593" damping="0.00002" armature="0.000001" />
+                <geom name="br_roller_11_contact" type="ellipsoid" size="0.0167705848156 0.0167705848156 0.0358712640043" quat="0.822664388008 -0.429766251885 0.372188491821 0" mass="0.02" rgba="0 0 0 0" group="3" contype="4" conaffinity="1" condim="3" friction="1.0 0.001 0.0001" />
+            </body>
+        </body>
+        <geom name="br_fixed_metal_visual" type="mesh" mesh="br_fixed_metal" rgba=".55 .58 .62 1" contype="0" conaffinity="0" group="2" mass="0" />
+        <geom name="br_motor_visual" type="mesh" mesh="br_motor" rgba=".09 .10 .12 1" contype="0" conaffinity="0" group="2" mass="0" />
+    </body>
+</mujocoinclude>

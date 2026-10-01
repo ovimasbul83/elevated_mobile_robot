@@ -1,0 +1,116 @@
+<mujoco model="elevated_mobile_manipulator">
+
+    <compiler
+        angle="radian"
+        meshdir="assets/meshes"
+        autolimits="true"/>
+
+    <option
+        timestep="0.001"
+        gravity="0 0 -9.81"
+        integrator="implicitfast"/>
+
+    <visual>
+        <global
+            azimuth="140"
+            elevation="-20"/>
+        <headlight
+            ambient="0.4 0.4 0.4"
+            diffuse="0.8 0.8 0.8"
+            specular="0.2 0.2 0.2"/>
+    </visual>
+
+    <!-- Kinova defaults and mesh assets -->
+    <include file="kinova_gen3_assets.xml"/>
+    <include file="wheel_assets.xml"/>
+
+    <asset>
+        <texture name="studio_background" type="skybox" builtin="gradient"
+                 rgb1="0.88 0.91 0.95" rgb2="0.97 0.98 0.99" width="512" height="3072"/>
+    </asset>
+
+    <worldbody>
+
+        <geom
+            name="floor"
+            type="plane"
+            size="20 20 2"
+            friction="1.0 0.01 0.001"
+            rgba="0.6 0.6 0.6 1"/>
+
+        <include file="mobile_manipulator.xml"/>
+
+    </worldbody>
+
+    <!-- Physical double-scissor loops. Sites coincide at each cross pin. -->
+    <equality>
+        <connect name="lower_cross_pin" site1="lower_a_center" site2="lower_b_center" solref="0.004 1" solimp="0.99 0.999 0.001"/>
+        <connect name="upper_cross_pin" site1="upper_a_center" site2="upper_b_center" solref="0.004 1" solimp="0.99 0.999 0.001"/>
+        <connect name="top_fixed_pin" site1="upper_a_tip" site2="top_fixed_attachment" solref="0.004 1" solimp="0.99 0.999 0.001"/>
+        <connect name="actuator_end_pin" site1="actuator_tip" site2="actuator_attachment" solref="0.004 1" solimp="0.99 0.999 0.001"/>
+    </equality>
+
+    <actuator>
+
+        <!-- Wheel velocity drives: rad/s commands, Nm force limits.
+             Simulation tuning only; not calibrated AK80-9 motor parameters. -->
+        <velocity name="wheel_fl_motor" joint="wheel_fl_joint" kv="10" ctrlrange="-6 6" forcerange="-12 12"/>
+        <velocity name="wheel_fr_motor" joint="wheel_fr_joint" kv="10" ctrlrange="-6 6" forcerange="-12 12"/>
+        <velocity name="wheel_bl_motor" joint="wheel_bl_joint" kv="10" ctrlrange="-6 6" forcerange="-12 12"/>
+        <velocity name="wheel_br_motor" joint="wheel_br_joint" kv="10" ctrlrange="-6 6" forcerange="-12 12"/>
+
+        <!--
+            DHLCT-C2-60 physical stroke = 1.005 m.
+            Platform-space drive: actuator thrust/stroke data was not supplied.
+            Gains and forcerange are simulation settings, not manufacturer ratings.
+        -->
+        <position
+            name="lift_motor"
+            joint="lift_joint"
+            kp="30000"
+            kv="1800"
+            ctrlrange="0 1.005"
+            forcerange="-2000 2000"/>
+
+        <!-- Kinova Gen3 position actuators -->
+        <position
+            class="large_actuator"
+            name="joint_1_actuator"
+            joint="joint_1"/>
+
+        <position
+            class="large_actuator"
+            name="joint_2_actuator"
+            joint="joint_2"
+            ctrlrange="-2.2497294058206907 2.2497294058206907"/>
+
+        <position
+            class="large_actuator"
+            name="joint_3_actuator"
+            joint="joint_3"/>
+
+        <position
+            class="large_actuator"
+            name="joint_4_actuator"
+            joint="joint_4"
+            ctrlrange="-2.5795966344476193 2.5795966344476193"/>
+
+        <position
+            class="small_actuator"
+            name="joint_5_actuator"
+            joint="joint_5"/>
+
+        <position
+            class="small_actuator"
+            name="joint_6_actuator"
+            joint="joint_6"
+            ctrlrange="-2.0996310901491784 2.0996310901491784"/>
+
+        <position
+            class="small_actuator"
+            name="joint_7_actuator"
+            joint="joint_7"/>
+
+    </actuator>
+
+</mujoco>

@@ -1,0 +1,10 @@
+<mujocoinclude>
+    <body name="mobile_base" pos="0 0 0.106229931">
+        <freejoint />
+        <!-- 15 kg mobile base: 11 kg chassis/fixed hardware + four 1 kg wheels.
+             Lift, aluminium platform, and robot arm are additional masses. -->
+        <geom name="chassis" type="box" size="0.380 0.215 0.050" mass="11" rgba="1 1 1 1" />
+        <include file="wheels.xml" />
+        <include file="scissor_lift.xml" />
+    </body>
+</mujocoinclude>

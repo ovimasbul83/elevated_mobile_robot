@@ -1,0 +1,17 @@
+{
+  "diameter_m": 0.15245986195421563,
+  "width_m": 0.0560000017285347,
+  "wheel_center_in_assembly_m": [
+    -0.048573319999999996,
+    -5.599367177291019e-16,
+    -1.561332344458784e-14
+  ],
+  "mobile_base_z_m": 0.10622993097710781,
+  "mass_per_rotating_wheel_kg": 1,
+  "contact_model": "12 passive 45-degree ellipsoid rollers per wheel",
+  "fixed_hardware_mass": "not calibrated; visual only",
+  "mirroring": "front-right reference; other corners reflected for diagonal handedness",
+  "rollers_per_wheel": 12,
+  "roller_mass_kg": 0.02,
+  "roller_geometry": "approximate; CAD visual geometry unchanged"
+}
