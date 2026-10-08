@@ -27,6 +27,46 @@ The C2-60 drawing explicitly dimensions the frame width as 420 mm, whereas the c
 
 ## Run
 
+### Setup on Windows, Linux, and macOS
+
+Use Python 3.12 or newer. From the project folder, create a virtual environment:
+
+```sh
+python -m venv .venv
+```
+
+On Linux/macOS, use `python3` if `python` is unavailable. Activate the environment for your shell:
+
+| Shell | Activation command |
+| --- | --- |
+| Windows PowerShell | `.\.venv\Scripts\Activate.ps1` |
+| Windows Git Bash | `source .venv/Scripts/activate` |
+| Linux/macOS bash or zsh | `source .venv/bin/activate` |
+
+Then install the runtime dependencies and launch:
+
+```sh
+python -m pip install -r requirements.txt
+python scripts/launch_sim.py --start-height 0.8
+```
+
+The launcher forwards all simulation options and uses the active Python environment. On macOS it selects `mjpython`, which [MuJoCo requires for its passive viewer](https://mujoco.readthedocs.io/en/stable/python.html#passive-viewer). Windows and Linux use the environment's Python directly. The interactive viewer needs a graphical desktop and working OpenGL drivers. Model and output paths resolve relative to the scripts, so an absolute script path also works from another directory. Run Python scripts through Python; invoking `scripts/run_sim.py` directly in a shell can interpret it as shell code.
+
+`requirements.txt` contains the tested simulation and preview dependencies. Optional wheel-mesh regeneration dependencies are in `requirements-cad.txt`:
+
+```sh
+python -m pip install -r requirements-cad.txt
+python scripts/build_wheels.py
+```
+
+Importing a new SolidWorks assembly through `scripts/inspect_wheel_cad.ps1` still requires Windows and Autodesk Inventor. Supply your own assembly path with `-SourceAssembly`; the script no longer assumes a particular user's Downloads folder. For example, in PowerShell:
+
+```powershell
+.\scripts\inspect_wheel_cad.ps1 -SourceAssembly "C:\CAD\Wheel Assembly.SLDASM"
+```
+
+Keep the assembly's companion part files available for Inventor to resolve. The checked-in exported meshes let the simulation run without Inventor. One-off report authoring utilities under `tmp/pdfs` are separate from the simulation setup.
+
 ### Imported mecanum wheel assemblies
 
 The four placeholder cylinders have been visually replaced with the supplied `002-21 -- _Wheel Assembly, Right.SLDASM` geometry. Its companion files were found in the existing `Mobile Robotic Base with Mecanum Wheels.zip` in Downloads; the assembly in that archive matched the supplied file byte-for-byte. Autodesk Inventor imported 34 component instances and exported 12 distinct part meshes. The wheel, adapter, and wheel fasteners rotate together; the motor and mounting hardware remain fixed to the chassis.
@@ -41,7 +81,7 @@ Wheel module mounts remain at x = ±304 mm and y = ±215 mm relative to the chas
 
 `scripts/mecanum_geometry.py` generates these roller contacts in `models/wheels.xml`; `scripts/build_wheels.py` also applies them when rebuilding the CAD assets. The roller physics is native MuJoCo XML and requires no runtime contact callback.
 
-Run `scripts/check_wheels.py` with the project Python to check all four ground contacts, fixed-versus-rotating parts, and stability. It saves `outputs/robot_cad_wheels.png` and `outputs/wheel_cad_detail.png`. Runtime assets are in `models/wheel_assets.xml`, `models/wheels.xml`, and `models/assets/meshes/wheels/`; Inventor is not needed to run the simulation. Intermediate CAD copies/exports are under `outputs/wheel_cad`. Rebuilding wheel assets uses `scripts/build_wheels.py` with NumPy and fast-simplification (installed locally in `.cad_deps` for the bundled Python 3.12 runtime).
+Run `scripts/check_wheels.py` with the project Python to check all four ground contacts, fixed-versus-rotating parts, and stability. It saves `outputs/robot_cad_wheels.png` and `outputs/wheel_cad_detail.png`. Runtime assets are in `models/wheel_assets.xml`, `models/wheels.xml`, and `models/assets/meshes/wheels/`; Inventor is not needed to run the simulation. Intermediate CAD copies/exports are under `outputs/wheel_cad`. Rebuilding wheel assets uses `scripts/build_wheels.py` with NumPy and fast-simplification from `requirements-cad.txt`; the original `.cad_deps` bundle remains a fallback.
 
 ### Start the simulation
 
@@ -86,10 +126,10 @@ These are servo reference limits and actuator torque caps, not a reproduction of
 
 ### Launch commands
 
-In Git Bash with `.venv` activated:
+On any supported OS with `.venv` activated:
 
 ```bash
-python scripts/run_sim.py --start-height 0.8
+python scripts/launch_sim.py --start-height 0.8
 ```
 
 Click the simulation window to focus it, then tap **W** forward, **S** reverse, **A** turn left, **D** turn right, **Q** strafe left, **E** strafe right, or **X** stop. Commands continue after releasing the key until another direction or X is pressed. Stop ramps down smoothly. Default commands are 0.10 m/s forward/reverse/sideways and 0.25 rad/s turning, with acceleration ramps. Motion is relative to the robot's heading, not the camera.

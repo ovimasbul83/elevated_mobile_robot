@@ -118,9 +118,8 @@ def render(model, data):
             panels.append(Image.fromarray(renderer.render()))
     canvas = Image.new("RGB", (1800, 820), "#f3f5f7")
     draw = ImageDraw.Draw(canvas)
-    font_path = "C:/Windows/Fonts/arial.ttf"
-    font = ImageFont.truetype(font_path, 22)
-    title = ImageFont.truetype(font_path, 29)
+    font = ImageFont.load_default(size=22)
+    title = ImageFont.load_default(size=29)
     draw.text((30, 16), f"{MODEL_NAME} | articulated double-scissor model", fill="#202936", font=title)
     for i, (panel, label) in enumerate(zip(panels, (f"{MIN_HEIGHT*1000:.0f} mm | collapsed", "800 mm | intermediate", f"{MAX_HEIGHT*1000:.0f} mm | extended"))):
         canvas.paste(panel, (600*i, 58))

@@ -1,8 +1,16 @@
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$SourceAssembly
+)
+
 $ErrorActionPreference = 'Stop'
+if ([Environment]::OSVersion.Platform -ne [PlatformID]::Win32NT) {
+    throw 'CAD import requires Windows and Autodesk Inventor. The simulation uses exported meshes and does not require Inventor.'
+}
+$source = (Resolve-Path -LiteralPath $SourceAssembly).Path
 $workspace = Split-Path $PSScriptRoot -Parent
 $outputDir = Join-Path $workspace 'outputs/wheel_cad'
 New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
-$source = 'C:\Users\oviha\Downloads\002-21 -- _Wheel Assembly, Right.SLDASM'
 $localSource = Join-Path $outputDir (Split-Path $source -Leaf)
 Copy-Item -LiteralPath $source -Destination $localSource -Force
 $inventor = $null

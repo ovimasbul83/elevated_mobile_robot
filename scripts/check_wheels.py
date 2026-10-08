@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+(ROOT / 'outputs').mkdir(exist_ok=True)
 model = mujoco.MjModel.from_xml_path(str(ROOT/'models/scene.xml'))
 data = mujoco.MjData(model)
 meta = json.loads((ROOT/'models/assets/meshes/wheels/wheel_metadata.json').read_text())

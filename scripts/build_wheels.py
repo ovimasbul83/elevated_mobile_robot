@@ -12,8 +12,12 @@ import numpy as np
 from mecanum_geometry import configure_wheels, ROLLER_COUNT, ROLLER_MASS
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / '.cad_deps'))
-import fast_simplification
+try:
+    import fast_simplification
+except ImportError:
+    # Retain support for the original local CAD dependency bundle.
+    sys.path.insert(0, str(ROOT / '.cad_deps'))
+    import fast_simplification
 
 SOURCE = ROOT / 'outputs/wheel_cad'
 DEST = ROOT / 'models/assets/meshes/wheels'
