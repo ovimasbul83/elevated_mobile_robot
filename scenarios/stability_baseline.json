@@ -1,0 +1,17 @@
+{
+  "settle_s": 2.0,
+  "sample_hz": 50,
+  "safety": {"wheel_load_N": 5.0, "load_scale_N": 100.0, "tilt_rad": 0.17453292519943295},
+  "scenarios": [
+    {"name": "stationary_mid", "initial_height_m": 0.8, "initial_arm_rad": [0,0,0,0,0,0,0],
+     "segments": [{"duration_s": 2, "motion": "stop"}]},
+    {"name": "forward_brake_high", "initial_height_m": 1.27, "initial_arm_rad": [0,0.8,0,-0.6,0,0.3,0],
+     "segments": [{"duration_s": 2, "motion": "forward"}, {"duration_s": 2, "motion": "stop"}]},
+    {"name": "strafe_reverse_mid", "initial_height_m": 0.8, "initial_arm_rad": [0.6,0.5,-0.3,-0.7,0.2,0.4,-0.2],
+     "segments": [{"duration_s": 2, "motion": "strafe-left"}, {"duration_s": 2, "motion": "strafe-right"}, {"duration_s": 1, "motion": "stop"}]},
+    {"name": "coordinated_lower_turn", "initial_height_m": 1.27, "initial_arm_rad": [0,0.8,0,-0.6,0,0.3,0],
+     "segments": [{"duration_s": 3, "motion": "left", "height_m": 1.2, "arm_rad": [0.4,0.3,-0.3,-0.9,0.3,0.5,-0.3]}, {"duration_s": 2, "motion": "stop"}]},
+    {"name": "coordinated_raise_drive", "initial_height_m": 0.8, "initial_arm_rad": [0,0,0,0,0,0,0],
+     "segments": [{"duration_s": 3, "motion": "forward", "height_m": 0.85, "arm_rad": [-0.4,-0.6,0.3,-0.8,-0.3,0.4,0.3]}, {"duration_s": 2, "motion": "stop"}]}
+  ]
+}

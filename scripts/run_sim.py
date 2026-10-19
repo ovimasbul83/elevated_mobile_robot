@@ -1,7 +1,14 @@
 import argparse
 import math
+import os
+import sys
 import time
 from pathlib import Path
+
+# Select the bundled X11 library before MuJoCo imports GLFW. XWayland also
+# provides DISPLAY on Wayland desktops; retain native Wayland when it is absent.
+if sys.platform.startswith("linux") and os.environ.get("DISPLAY"):
+    os.environ.setdefault("PYGLFW_LIBRARY_VARIANT", "x11")
 
 import mujoco
 import mujoco.viewer

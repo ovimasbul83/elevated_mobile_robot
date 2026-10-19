@@ -160,6 +160,21 @@ The existing `lift_motor` interface is preserved as a **platform-space position 
 
 ## Check and preview
 
+### Whole-robot stability measurements
+
+Run repeatable headless base/lift/arm maneuvers with contact-force and state logging:
+
+```sh
+python scripts/run_stability_scenarios.py --output outputs/stability/baseline-001
+python scripts/check_stability.py
+```
+
+Use a new output directory for each run. The configurable scenarios are in
+`scenarios/stability_baseline.json`; the physical safety requirement, state/control
+definition, logging conventions, and PINN formulation decisions are documented in
+[`docs/whole_robot_safety.md`](docs/whole_robot_safety.md). These measurements are
+scripted-policy outcomes, not learned viability labels. Thresholds are provisional.
+
 ```powershell
 .\.venv\Scripts\python.exe scripts/check_scissor_lift.py --render
 ```

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>elevated_arm_bringup</name>
+  <version>0.1.0</version>
+  <description>Kinova Gen3 7-DOF mock and physical arm bringup for the elevated mobile robot.</description>
+  <maintainer email="mash@example.com">Mash</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>kortex_bringup</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

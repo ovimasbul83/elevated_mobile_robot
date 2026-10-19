@@ -239,6 +239,9 @@ __pycache__/
 # Intermediate CAD imports and meshes; runtime meshes live in models/assets/
 /outputs/wheel_cad/
 
+# Generated whole-robot scenario telemetry (retain source configs and checks)
+/outputs/stability/
+
 # Editor and operating-system files
 .vscode/
 .idea/
